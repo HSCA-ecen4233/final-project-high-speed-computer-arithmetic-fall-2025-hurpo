@@ -1,0 +1,3 @@
+fma16 : X=x Y=x Z=x
+PASS: got=xxxx expected=xxxx | flags=xxxxx exp_flags=xxxxx
+         1 tests completed with          0 errors

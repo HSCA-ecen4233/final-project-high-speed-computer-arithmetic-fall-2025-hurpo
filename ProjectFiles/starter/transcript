@@ -1,0 +1,85 @@
+# //  Questa Sim-64
+# //  Version 2023.4 win64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {.\fma16.do}
+# Error 133: Unable to remove directory "C:/Users/Skyla/Dropbox/Vaults/Planner/Planner/School/Fall 2025/ECEN-4233 High Speed Comp/hw-study/final-project-high-speed-computer-arithmetic-fall-2025-hurpo/HSCA_F25/project/starter/work".
+# QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+# Start time: 16:13:38 on Dec 05,2025
+# vlog -reportprogress 300 fma16.sv tb_fma16.sv 
+# -- Compiling module fma16
+# -- Compiling module unpack
+# -- Compiling module mul_core
+# -- Compiling module add_core
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	fma16
+# 	unpack
+# 	mul_core
+# 	tb
+# End time: 16:13:38 on Dec 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb 
+# Start time: 16:13:38 on Dec 05,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.add_core(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# === add_core testbench start ===
+# ---- Normal + Normal ----
+# Xs=0 Xe=15 Xm=0x600  |  Ys=0 Ye=14 Ym=0x400
+# Special: X Z=0 Inf=0 NaN=0 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=16 Wm=0x400  Zero=0 Inf=0 NaN=0
+# 
+# ---- Normal + Normal ----
+# Xs=0 Xe=15 Xm=0x600  |  Ys=0 Ye=12 Ym=0x405
+# Special: X Z=0 Inf=0 NaN=0 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=15 Wm=0x681  Zero=0 Inf=0 NaN=0
+# 
+# ---- Subtraction (+ -) ----
+# Xs=0 Xe=16 Xm=0x600  |  Ys=1 Ye=16 Ym=0x500
+# Special: X Z=0 Inf=0 NaN=0 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=14 Wm=0x0  Zero=0 Inf=0 NaN=0
+# 
+# ---- Zero + Normal ----
+# Xs=0 Xe=0 Xm=0x0  |  Ys=0 Ye=12 Ym=0x600
+# Special: X Z=1 Inf=0 NaN=0 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=12 Wm=0x600  Zero=0 Inf=0 NaN=0
+# 
+# ---- Infinity + Normal ----
+# Xs=0 Xe=0 Xm=0x0  |  Ys=0 Ye=12 Ym=0x600
+# Special: X Z=0 Inf=1 NaN=0 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=0 Wm=0x0  Zero=0 Inf=1 NaN=0
+# 
+# ---- +INF + -INF ----
+# Xs=0 Xe=0 Xm=0x0  |  Ys=1 Ye=0 Ym=0x0
+# Special: X Z=0 Inf=1 NaN=0 | Y Z=0 Inf=1 NaN=0
+# => W: Ws=0 We=0 Wm=0x0  Zero=0 Inf=0 NaN=1
+# 
+# ---- NaN input ----
+# Xs=0 Xe=0 Xm=0x0  |  Ys=0 Ye=0 Ym=0x0
+# Special: X Z=0 Inf=0 NaN=1 | Y Z=0 Inf=0 NaN=0
+# => W: Ws=0 We=0 Wm=0x0  Zero=0 Inf=0 NaN=1
+# 
+# === add_core testbench complete ===
+# ** Note: $finish    : tb_fma16.sv(157)
+#    Time: 7 ns  Iteration: 0  Instance: /tb
+# 1
+# Break in Module tb at tb_fma16.sv line 157
+# End time: 19:31:53 on Dec 05,2025, Elapsed time: 3:18:15
+# Errors: 0, Warnings: 1
